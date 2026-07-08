@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--
+  ============================================================================
+  FAIR SIGNPOSTING LANDING PAGE  (static, GitHub Pages compatible)
+  ============================================================================
+  This page IS the persistent identifier / landing page for one OME-Zarr
+  dataset. It carries Signposting typed links as HTML <head><link> elements.
+
+  GitHub Pages cannot set HTTP Link headers, so the <head><link> mechanism is
+  used instead (an approach the Signposting spec explicitly permits). GitHub
+  Pages serves every response with `access-control-allow-origin: *`, so a
+  browser-based reader (e.g. vizarr) can cross-origin fetch() this page and
+  parse these links out of the body.
+
+  TO REUSE FOR ANOTHER DATASET: change only the values in the block below,
+  then regenerate the <link> tags / linkset.json to match.
+  ----------------------------------------------------------------------------
+  Dataset .zarr root :
+    https://livingobjects.ebi.ac.uk/bioimaging-01-pub/ebi-ngff-challenge-2024/c0e5d621-62cc-43a6-9dad-2ddab8959d17.zarr
+  This landing page (cite-as / the PID; EDIT to your Pages URL) :
+    https://YOURNAME.github.io/REPO/
+  NGFF profile version: 0.5
+  ============================================================================
+-->
+
+<title>OME-Zarr dataset c0e5d621 — FAIR Signposting landing page</title>
+
+<!-- ========================= SIGNPOSTING LINKS ========================= -->
+
+<!-- cite-as: the canonical persistent identifier for this object.
+     This MUST be this landing page's own stable URL. EDIT to your Pages URL. -->
+<link rel="cite-as" href="https://tiago.bio.br/oz_signpost/test1">
+
+<!-- type: what kind of thing this is (generic + domain-specific) -->
+<link rel="type" href="https://schema.org/Dataset">
+<link rel="type" href="https://schema.org/ImageObject">
+
+<!-- describedby: machine-readable metadata resources (their location is all
+     that's needed here; a client fetches them for the actual metadata). -->
+<link rel="describedby"
+      href="https://livingobjects.ebi.ac.uk/bioimaging-01-pub/ebi-ngff-challenge-2024/c0e5d621-62cc-43a6-9dad-2ddab8959d17.zarr/ro-crate-metadata.json"
+      type="application/ld+json">
+<link rel="describedby"
+      href="https://livingobjects.ebi.ac.uk/bioimaging-01-pub/ebi-ngff-challenge-2024/c0e5d621-62cc-43a6-9dad-2ddab8959d17.zarr/zarr.json"
+      type="application/json">
+
+<!-- item: the content resource(s). The .zarr root is the entry point a viewer
+     opens; it is the collection root of all chunk/array resources beneath it.
+     profile pins the OME-NGFF spec version so a generic reader knows the flavor. -->
+<link rel="item"
+      href="https://livingobjects.ebi.ac.uk/bioimaging-01-pub/ebi-ngff-challenge-2024/c0e5d621-62cc-43a6-9dad-2ddab8959d17.zarr"
+      profile="https://ngff.openmicroscopy.org/0.5/">
+
+<!-- linkset: a companion machine-readable linkset document (static JSON). -->
+<link rel="linkset"
+      href="./linkset.json"
+      type="application/linkset+json">
+
+<!-- ==================================================================== -->
+
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+         max-width: 46rem; margin: 3rem auto; padding: 0 1.25rem;
+         line-height: 1.6; color: #1a1a1a; background: #fff; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #111; }
+    a { color: #7fb0ff; }
+    code { background: #222; }
+    .card { border-color: #333; }
+  }
+  h1 { font-size: 1.35rem; font-weight: 600; }
+  code { background: #f2f2f2; padding: .1em .35em; border-radius: 4px;
+         font-size: .88em; word-break: break-all; }
+  .card { border: 1px solid #ddd; border-radius: 10px; padding: 1rem 1.25rem;
+          margin: 1.25rem 0; }
+  .btn { display: inline-block; margin-top: .5rem; padding: .6rem 1.1rem;
+         background: #185FA5; color: #fff; text-decoration: none;
+         border-radius: 8px; font-weight: 500; }
+  dt { font-weight: 600; margin-top: .6rem; }
+  dd { margin: 0 0 0 0; }
+  .muted { color: #777; font-size: .9rem; }
+</style>
+</head>
+
+<body>
+  <h1>OME-Zarr dataset — FAIR Signposting landing page</h1>
+
+  <p class="muted">
+    This page is the stable landing page for a single bioimaging dataset.
+    It advertises the dataset's content and metadata locations as
+    machine-actionable <a href="https://signposting.org/FAIR/">FAIRSignposting links</a> (in the page <code>&lt;head&gt;</code>
+    and in <a href="./linkset.json">linkset.json</a>).
+  </p>
+
+  <div class="card">
+    <dl>
+      <dt>Identifier (cite-as)</dt>
+      <dd><code>https://tiago.bio.br/oz_signpost/test1</code>
+          <span class="muted"></span></dd>
+
+      <dt>Content resource (item)</dt>
+      <dd><code>https://livingobjects.ebi.ac.uk/bioimaging-01-pub/ebi-ngff-challenge-2024/c0e5d621-62cc-43a6-9dad-2ddab8959d17.zarr</code></dd>
+
+      <dt>Metadata (describedby)</dt>
+      <dd><code>https://livingobjects.ebi.ac.uk/bioimaging-01-pub/ebi-ngff-challenge-2024/c0e5d621-62cc-43a6-9dad-2ddab8959d17.zarr/ro-crate-metadata.json</code><br>
+          <code>https://livingobjects.ebi.ac.uk/bioimaging-01-pub/ebi-ngff-challenge-2024/c0e5d621-62cc-43a6-9dad-2ddab8959d17.zarr/zarr.json</code></dd>
+
+      <dt>Type / profile</dt>
+      <dd>OME-NGFF 0.5 image (<code>schema.org/Dataset</code>)</dd>
+    </dl>
+
+    <a class="btn" id="view-link"
+       href="https://tiago.bio.br/oz_view?source=https://tiago.bio.br/oz_signpost/test1">
+       View in image viewer →</a>
+    <p class="muted" style="margin-top:.5rem">
+      The viewer demonstrates how a static page may follow this page's Signposting <code>item</code> link to
+      locate the pixel data.
+    </p>
+  </div>
+
+  <p class="muted">
+    Note: GitHub Pages cannot emit HTTP <code>Link</code> headers, so
+    header-only harvesters will not see these links; readers that parse the
+    HTML <code>&lt;head&gt;</code> or fetch <code>linkset.json</code> will.
+  </p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://tiago.bio.br/oz_signpost/test1",
+      "cite-as": [{ "href": "https://tiago.bio.br/oz_signpost/test1" }],
+      "type": [
+        { "href": "https://schema.org/Dataset" },
+        { "href": "https://schema.org/ImageObject" }
+      ],
+      "describedby": [
+        {
+          "href": "https://livingobjects.ebi.ac.uk/bioimaging-01-pub/ebi-ngff-challenge-2024/c0e5d621-62cc-43a6-9dad-2ddab8959d17.zarr/ro-crate-metadata.json",
+          "type": "application/ld+json"
+        },
+        {
+          "href": "https://livingobjects.ebi.ac.uk/bioimaging-01-pub/ebi-ngff-challenge-2024/c0e5d621-62cc-43a6-9dad-2ddab8959d17.zarr/zarr.json",
+          "type": "application/json"
+        }
+      ],
+      "item": [
+        {
+          "href": "https://livingobjects.ebi.ac.uk/bioimaging-01-pub/ebi-ngff-challenge-2024/c0e5d621-62cc-43a6-9dad-2ddab8959d17.zarr",
+          "profile": "https://ngff.openmicroscopy.org/0.5/"
+        }
+      ]
+    }
+  ]
+}
